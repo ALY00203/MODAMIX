@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/MODAMIX/static/css/main.bf4c807f.css",
+    "main.js": "/MODAMIX/static/js/main.71da9c0a.js",
+    "static/media/23418582.mp4": "/MODAMIX/static/media/23418582.811cb5b6ae4b088079c0.mp4",
+    "static/media/cover.jpg": "/MODAMIX/static/media/cover.26785fdbd4f737058607.jpg",
+    "static/media/Bg_17.png": "/MODAMIX/static/media/Bg_17.5df76a4771c431c21dae.png",
+    "static/media/Lobster-Regular.ttf": "/MODAMIX/static/media/Lobster-Regular.03c38496322925fec242.ttf",
+    "static/media/collection-new-arrivals.png": "/MODAMIX/static/media/collection-new-arrivals.7e58c26d7b7d8b88bc40.png",
+    "static/media/collection-man.png": "/MODAMIX/static/media/collection-man.069addcccddf308077dc.png",
+    "static/media/Roboto-BlackItalic.ttf": "/MODAMIX/static/media/Roboto-BlackItalic.fd62a10743bd89a3d97c.ttf",
+    "static/media/signup2.jpg": "/MODAMIX/static/media/signup2.eb3771acb9cab0b22508.jpg",
+    "static/media/fetting.jpg": "/MODAMIX/static/media/fetting.5cd207b4b2aa18fa3637.jpg",
+    "static/media/pink-hanger-tropical-monstera-leaf-marble-wallpaper-preview.jpg": "/MODAMIX/static/media/pink-hanger-tropical-monstera-leaf-marble-wallpaper-preview.259bcde040f56dabf9b6.jpg",
+    "index.html": "/MODAMIX/index.html",
+    "main.bf4c807f.css.map": "/MODAMIX/static/css/main.bf4c807f.css.map",
+    "main.71da9c0a.js.map": "/MODAMIX/static/js/main.71da9c0a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf4c807f.css",
+    "static/js/main.71da9c0a.js"
+  ]
+}
