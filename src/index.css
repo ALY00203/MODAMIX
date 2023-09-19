@@ -1,0 +1,443 @@
+#light {
+  background-color: #fff;
+}
+
+#dark {
+  background-color: #131212;
+}
+#dark  .address {
+  color:#eeeef1 ;
+  text-decoration: none;
+}
+#dark .cardBody {
+  background-color: #131212;
+  border: 3px solid white;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* navbar */
+.Nav{
+  background-color: #f06969;
+}
+.footer{
+  background-color: #f06969;
+}
+
+.parent{
+  min-height: 620px;
+  overflow: hidden;
+
+}
+/* login */
+.login {
+  background-image: url(./vedios-images/pink-hanger-tropical-monstera-leaf-marble-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+/* btn-in-card */
+.cardBtn {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #f06969 !important;
+  color: #f06969;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  touch-action: manipulation;
+}
+
+.cardBtn span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+  border: none;
+}
+
+.cardBtn span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+  border: none;
+}
+
+.cardBtn:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f06969;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+  border: none;
+}
+
+.cardBtn:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.cardBtn:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  border: none;
+}
+/* signup */
+
+.main {
+  background-image: url(../src/vedios-images/signup2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+padding: 75px 0px;
+height: 100vh ;
+}
+.form-box{
+background-color: rgba(225, 225, 225, 0.5);
+/* backdrop-filter: blur(30px); */
+border-radius: 20px;
+border: 1px solid white;
+}
+
+.form-box input{
+border-radius: 10px;
+}
+.form-box input:focus{
+  box-shadow: 0 0 0;
+  border: 1px solid #f6288c;
+}
+.form-box select{
+  border-radius: 10px;
+}
+.form-box select:focus{
+  box-shadow: 0 0 0;
+  border: 1px solid #f6288c;
+  
+}
+.input-group-text{
+  border-radius:  0px 10px 10px 0px;
+}
+.register-btn{
+  background-image: linear-gradient(to right, #63118b, #f80f88, #f80f88);
+  border: none;
+  border-radius: 10px;
+  color:#fff;
+}
+.catButton{
+  background-color: #f00707;
+  color: white,
+}
+
+
+/* CSS */
+.catBtn {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 5px;
+  opacity: 1;
+  outline: 0;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.catBtn:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color:#f06969;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.catBtn:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.catBtn:after {
+  background-color: #FFFFFF;
+}
+
+.catBtn span {
+  z-index: 1;
+  position: relative;
+}
+/* .catBtn{
+  border: 3px solid  #f06969 ;
+  margin: 15px;
+  padding: 5px;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 80px;
+  margin-right: 55px;
+}
+
+.catBtn:hover {
+  background-color: #f06969;
+  color: rgb(241, 239, 239);
+  transition: 0.5s ;
+} */
+
+.imgDetails{
+  width: 100%;
+}
+
+.ProDet{
+  width: 100% ;
+  height: 100% ;
+  padding: 5%;
+  margin: 5%;
+  border: #18181a;
+  justify-content: center;
+  align-items: center;
+}
+
+.body{
+  width: 100%;
+  border: 5px solid red;
+}
+.bald{
+box-shadow: #f06969 5px 5px,  #f06969 10px 10px, #f06969 15px 15px,  #f06969 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.bg{
+  background-image: url(./vedios-images/fetting.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.alert-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.alert-container.hide {
+  display: none;
+}
+.search-in{
+border: 4px solid #f06969;
+padding: 5px;
+}
+.search-item:focus {
+outline: 0;
+}
+.search-in-2 {
+border: 4px solid #f06969;
+}
+.search-in-2:focus {
+  outline: 0;
+}
+.CART{
+  color: #f06969; 
+}
+
+/* carousel.css */
+
+.slider {
+  height: 600px;
+  background-image: url('./vedios-images/Bg_17.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-item {
+  height: 100vh;
+}
+.scroll{
+    background-image: url("./vedios-images/cover.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 900px;
+}
+
+
+.button-24 {
+  background: #f06969;
+  border: 1px solid #f06969;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10px;
+  min-height: 20px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+.PagiMain{
+  background-color: #f06969 !important;
+}
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #f06969;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+/* Custom styles for pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.pagination li a {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Style for the active page */
+.pagination li.active a {
+  background-color:#f06969;
+  color: #fff;
+}
+
+/* CreditCardForm custom styles */
+
+/* custom-card-styles.css */
+.PaymentCard  input {
+  border-radius: 5px;
+}
+
+.input {
+  border-color: #18181a;
+}
+/* Your existing styles for the card */
+.cardAbout {
+  /* Add any other styles you have for the card */
+  /* Make sure the card has a fixed height to prevent layout shifts */
+width: 500px;
+  height: 600px; /* Adjust the height as needed */
+  overflow: hidden; /* Hide any overflowing content inside the card */
+}
+
+.image-container {
+  /* Position the container relative to the card */
+  position: relative;
+  /* Set a fixed aspect ratio for the image */
+  padding-top: 100%; /* This creates a square aspect ratio, adjust as needed */
+}
+
+.image {
+  /* Position the image absolutely within its container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Add any other styles you have for the image */
+}
+
+/* New styles for scaling on hover */
+.cardAbout:hover .image {
+  /* Apply the scaling effect when hovering over the card */
+  transform: scale(1.1); /* Adjust the scale factor as desired */
+  /* Optionally, you can add a transition to make the scaling smooth */
+  transition: transform 0.3s ease; /* Adjust the transition duration as needed */
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .video-container {
+    display: none;
+  }
+}
+
+.cardBody {
+  line-height: 15px;
+  align-items: stretch;
+}

@@ -1,0 +1,28 @@
+/* Define the @font-face rule */
+@font-face {
+    font-family: 'Lobster';
+    src: url('./fonts/Lobster-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Apply the custom font to an element */
+  .brand {
+    font-family: 'Lobster', sans-serif;
+    /* font-size: 50px; */
+  }
+  
+/* ============================================================================== */
+  @font-face {
+    font-family: 'Roboto Black Italic';
+    src: url('./fonts/Roboto-BlackItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  /* Apply the custom font to an element */
+.custom-link-font {
+    font-family: 'Roboto Black Italic', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+  }
