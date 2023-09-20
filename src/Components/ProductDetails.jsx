@@ -9,7 +9,7 @@ function ProductDetails() {
     const params = useParams()
     const [product, setProduct] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:3004/products/${params.ProductId}`).then((res) => {
+        axios.get(`https://murmuring-meadow-67184.herokuapp.com/Products/${params.ProductId}`).then((res) => {
           setProduct(res.data)
         })
       }, [params.ProductId])
