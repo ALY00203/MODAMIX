@@ -11,20 +11,20 @@ function ProductsList() {
 
   // =======getProducts=====
   const getProducts = () => {
-    axios.get('http://localhost:3004/products').then((res) => {
+    axios.get('https://ALY00203.github.io/modamixshopping-db/db.json').then((res) => {
       setProducts(res.data);
     });
   };
   // =======getCat==========
   const getCategories = () => {
-    axios.get('http://localhost:3004/Categories').then((res) => {
+    axios.get('https://ALY00203.github.io/modamixshopping-db/db.json').then((res) => {
       setCategories(res.data);
     });
   };
   // =======getProInCat=====
   const getProductsInCat = (catName) => {
     axios
-      .get(`http://localhost:3004/products?category=${catName}`)
+      .get(`https://ALY00203.github.io/modamixshopping-db/db.json?category=${catName}`)
       .then((res) => {
         setProducts(res.data);
       });

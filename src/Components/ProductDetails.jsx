@@ -9,7 +9,7 @@ function ProductDetails() {
     const params = useParams()
     const [product, setProduct] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:3004/products/${params.ProductId}`).then((res) => {
+        axios.get(`https://ALY00203.github.io/modamixshopping-db/db.json?id=${params.ProductId}`).then((res) => {
           setProduct(res.data)
         })
       }, [params.ProductId])
