@@ -11,20 +11,20 @@ function ProductsList() {
 
   // =======getProducts=====
   const getProducts = () => {
-    axios.get('https://murmuring-meadow-67184.herokuapp.com/Products').then((res) => {
+    axios.get('http://localhost:3004/products').then((res) => {
       setProducts(res.data);
     });
   };
   // =======getCat==========
   const getCategories = () => {
-    axios.get('https://murmuring-meadow-67184.herokuapp.com/Categories').then((res) => {
+    axios.get('http://localhost:3004/Categories').then((res) => {
       setCategories(res.data);
     });
   };
   // =======getProInCat=====
   const getProductsInCat = (catName) => {
     axios
-      .get(`https://murmuring-meadow-67184.herokuapp.com/Products?category=${catName}`)
+      .get(`http://localhost:3004/products?category=${catName}`)
       .then((res) => {
         setProducts(res.data);
       });
