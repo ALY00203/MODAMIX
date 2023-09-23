@@ -3,6 +3,9 @@ import Product from './Product';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 
+// const [products, setProducts] = useState([]);
+
+
 function ProductsList() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -11,24 +14,28 @@ function ProductsList() {
 
   // =======getProducts=====
   const getProducts = () => {
-    axios.get('https://ALY00203.github.io/modamixshopping-db/db.json').then((res) => {
-      setProducts(res.data);
+    axios.get('https://aly00203.github.io/modamixjsonAPI/db.json').then((res) => {
+      setProducts(res.data.Products);
     });
   };
-  // =======getCat==========
-  const getCategories = () => {
-    axios.get('https://ALY00203.github.io/modamixshopping-db/db.json').then((res) => {
-      setCategories(res.data);
-    });
-  };
+// =======getCat==========
+const getCategories = () => {
+  axios.get('https://aly00203.github.io/modamixjsonAPI/db.json').then((res) => {
+    setCategories(res.data.Categories);
+  });
+};
   // =======getProInCat=====
   const getProductsInCat = (catName) => {
-    axios
-      .get(`https://ALY00203.github.io/modamixshopping-db/db.json?category=${catName}`)
-      .then((res) => {
-        setProducts(res.data);
-      });
+    axios.get('https://aly00203.github.io/modamixjsonAPI/db.json').then((res) => {
+      const allProducts = res.data.Products; // Assuming your product data is under the 'Products' property
+      const filteredProducts = allProducts.filter((product) => product.category === catName);
+  
+      setProducts(filteredProducts);
+    });
   };
+  
+  
+  
 
 
 
@@ -48,13 +55,12 @@ function ProductsList() {
     setCurrentPage(selected);
   };
 
-  // Function to get the products for the current page
-  const getCurrentProducts = () => {
-    const start = currentPage * itemsPerPage;
-    const end = start + itemsPerPage;
-    return products.slice(start, end);
-  };
-
+// Function to get the products for the current page
+const getCurrentProducts = () => {
+  const start = currentPage * itemsPerPage;
+  const end = start + itemsPerPage;
+  return products.slice(start, end);
+};
   return (
     <>
       <h3 className='text-center p-3 d-flex justify-content-center w-100 border align-items-end fw-bold custom-link-font'>
